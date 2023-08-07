@@ -24,7 +24,6 @@ function App() {
   const [quizNine, setQuizNine] = useState(false);
   const [quizTen, setQuizTen] = useState(false);
   const [quizEleven, setQuizEleven] = useState(false);
-  
 
   const handleShowQuiz = () => {
     setQuiz(true);
@@ -70,7 +69,7 @@ function App() {
     setQuizTen(false);
     setQuizEleven(true);
   };
-  
+
   return (
     <div>
       {login && (
@@ -326,7 +325,7 @@ function App() {
                 <br />
                 <button
                   className="btn btn-success mx-4"
-                  onClick={ handleShowQuizFour}
+                  onClick={handleShowQuizFour}
                 >
                   Next
                 </button>
@@ -616,25 +615,20 @@ function App() {
         </div>
       )}
 
-{quizEleven && (
+      {quizEleven && (
         //Submission
         <div>
           <div className="container">
             <div className="row">
               <div className="col-md-6 mt-5">
-               <div className="">
-                <h3></h3>
-                <h4></h4>
-                <button
-                  className="btn btn-success mx-4"
-                  onClick={handleShowQuiz}
-                >
-                  Thanks For Solving The Quiz. 
-                  GREAT JOB!
-                </button>
-                {/* box text-light text-center bg-success" width={"40%"} height={"100px"} */}
-               </div>
-               
+                <div>
+                  <button
+                    className="btn btn-success mx-4"
+                    onClick={handleShowQuiz}
+                  >
+                    Thanks For Solving The Quiz. GREAT JOB!
+                  </button>
+                </div>
               </div>
 
               <div className="col-md-6"></div>
@@ -642,9 +636,6 @@ function App() {
           </div>
         </div>
       )}
-
-
-
     </div>
   );
 }
