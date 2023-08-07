@@ -28,6 +28,7 @@ function App() {
   const handleShowQuiz = () => {
     setQuiz(true);
     setQuizTwo(false);
+    setQuizEleven(false);
   };
   const handleShowQuizTwo = () => {
     setQuiz(false);
