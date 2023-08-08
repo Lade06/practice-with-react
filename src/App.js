@@ -61,9 +61,102 @@ function App() {
     setQuizEleven(true);
   };
 
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue",
+  };
+
+  // ARRAY OF QUESTIONS
+  const Faq = [
+    {
+      qa: "What is the capital of France?",
+      answera: "Paris",
+      notcorrecta: "London",
+      notcorrectb: "Rome",
+      notcorrectc: "Madrid",
+    },
+    {
+      qb: "What is the largest mammal?",
+      answerb: "The blue whale",
+      notcorrectba: "Shark",
+      notcorrectbc: "Bat",
+      notcorrectbd: "Kangaroo",
+
+    },
+    {
+      qc: "Who painted the Mona Lisa?",
+      answerc: "Leonardo da Vinci.",
+      notcorrectca: "Vincent van Gogh",
+      notcorrectcb: "Micheangelo",
+      notcorrectcd: "Pablo Picasso",
+
+    },
+    {
+      qd: "What is the chemical symbol for gold?",
+      answerd: "Au",
+      notcorrectda: "Ag",
+      notcorrectdb: "Cu",
+      notcorrectdc: " Fe",
+    },
+    {
+      qe: "How many continents are there?",
+      answere: "Seven",
+      notcorrectea: "Thirteen",
+      notcorrecteb: "Nine",
+      notcorrectec: "Five",
+    },
+    {
+      qf: "What is the tallest mountain in the world?",
+      answerf: "Mount Everest",
+      notcorrectfa: "Mount Kilimanjaro",
+      notcorrectfb: "Mount Logan",
+      notcorrectfc: "Mount Vinson",
+    },
+    {
+      qg: 'Who wrote the play "Romeo and Juliet"?',
+      answerg: "William Shakespeare",
+      notcorrectga: "Daniel Walker",
+      notcorrectgb: "Ayo Davis",
+      notcorrectgc: "Stone Ricco",
+    },
+    {
+      qh: "What is the largest planet in our solar system?",
+      answerh: "Jupiter",
+      notcorrectha: "Pluto",
+      notcorrecthb: "Mars",
+      notcorrecthc: "Saturn",
+    },
+    {
+      qi: "Who invented the telephone?",
+      answeri: "Alexander Graham Bell",
+      notcorrectia: "Vincent van Gogh",
+      notcorrectib: "Tony Blaire",
+      notcorrectic: "Ladeh Ladeh",
+    },
+    {
+      qj: "What is the symbol for the element oxygen?",
+      answerj: "O",
+      notcorrectja: "M",
+      notcorrectjb: "NO",
+      notcorrectjc: " P",
+    },
+  ];
+
+  const firstqa = Faq[0];
+  const secondqb = Faq[1];
+  const thirdqc = Faq[2];
+  const fourthqd = Faq[3];
+  const fifthqe = Faq[4];
+  const sixthqf = Faq[5];
+  const seventhqg = Faq[6];
+  const eightqh = Faq[7];
+  const ninthqi = Faq[8];
+  const tenthtqj = Faq[9];
+
   return (
     <div>
-
       {quiz && (
         //question 1
         <div>
@@ -73,14 +166,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 1</h3>
                 <p>
-                  <b>What is the capital city of France?</b>
+                  <b>
+                    {firstqa.qa}
+                  </b>
                 </p>
-                <input type="radio" name="country" value="paris" /> Paris <br />
-                <input type="radio" name="country" value="rome" /> Rome <br />
-                <input type="radio" name="country" value="london" /> London{" "}
-                <br />
-                <input type="radio" name="country" value="madrid" /> Madrid{" "}
-                <br /> <br />{" "}
+                <input type="radio" name="country" /> {firstqa.answera} <br />
+                <input type="radio" name="country" /> {firstqa.notcorrecta} <br />
+                <input type="radio" name="country" /> {firstqa.notcorrectb} <br />
+                <input type="radio" name="country" /> {firstqa.notcorrectc} <br /><br />
+
+
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizTwo}
@@ -106,17 +201,15 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 2</h3>
                 <p>
-                  <b>Which planet is known as the "Red Planet"?</b>
+                  <b>
+                    {secondqb.qb}
+                  </b>
                 </p>
-                <input type="radio" name="planet" value="venus" /> Venus <br />
-                <input type="radio" name="planet" value="mars" /> Mars <br />
-                <input
-                  type="radio"
-                  name="planet"
-                  value="jupiter"
-                /> Jupiter <br />
-                <input type="radio" name="planet" value="saturn" /> Saturn{" "}
-                <br />
+                <input type="radio" name="mammals" /> {secondqb.answerb} <br />
+                <input type="radio" name="mammals" /> {secondqb.notcorrectba} <br />
+                <input type="radio" name="mammals"/> {secondqb.notcorrectbc} <br />
+                <input type="radio" name="mammals"/> {secondqb.notcorrectbd} <br /><br />
+                
                 <br />
                 <br />
                 <button
@@ -144,21 +237,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 3</h3>
                 <p>
-                  <b>Who is the author of the "Harry Potter" book series?</b>
+                  <b>
+                    {thirdqc.qc}
+                  </b>
                 </p>
-                <input type="radio" name="author" value="j.r.r tolkien" />{" "}
-                J.R.R. Tolkien <br />
-                <input type="radio" name="author" value="j.k rowling" /> J.K.
-                Rowling <br />
-                <input type="radio" name="author" value="stephen king" />{" "}
-                Stephen King <br />
-                <input
-                  type="radio"
-                  name="author"
-                  value="george r.r martin"
-                />{" "}
-                George R.R. Martin <br />
-                <br />
+                <input type="radio" name="artist" /> {thirdqc.answerc} <br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectca} <br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectcb} <br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectcd} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizFour}
@@ -181,13 +267,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 4</h3>
                 <p>
-                  <b>What is the chemical symbol for water?</b>
+                  <b>
+                    {fourthqd.qd}
+                  </b>
                 </p>
-                <input type="radio" name="symbol" value="wo " /> WO <br />
-                <input type="radio" name="symbol" value="ho " /> HO <br />
-                <input type="radio" name="symbol" value="co " /> CO <br />
-                <input type="radio" name="symbol" value="h2o " /> H2O <br />
-                <br />
+                <input type="radio" name="element" /> {fourthqd.answerd} <br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectda} <br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectdb} <br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectdc} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizFive}
@@ -211,31 +298,16 @@ function App() {
               <div className="col-md-6 mt-5">
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 5</h3>
+                
                 <p>
                   <b>
-                    Which famous scientist formulated the theory of relativity?
+                    {fifthqe.qe}
                   </b>
                 </p>
-                <input type="radio" name="scientist" value="isaac newton " />{" "}
-                Isaac Newton <br />
-                <input
-                  type="radio"
-                  name="scientist"
-                  value="albert einstein "
-                />{" "}
-                Albert Einstein <br />
-                <input
-                  type="radio"
-                  name="scientist"
-                  value="marie curie "
-                />{" "}
-                Marie Curie <br />
-                <input
-                  type="radio"
-                  name="scientist"
-                  value="galileo galilei "
-                />{" "}
-                Galileo Galilei <br />
+                <input type="radio" name="continent" /> {fifthqe.answere} <br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrectea} <br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrecteb} <br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrectec} <br /><br />
                 <br />
                 <button
                   className="btn btn-success mx-4"
@@ -262,25 +334,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 6</h3>
                 <p>
-                  <b>Which mammal can fly?</b>
+                  <b>
+                    {sixthqf.qf}
+                  </b>
                 </p>
-                <input type="radio" name="mammal" value="bat " /> Bat <br />
-                <input
-                  type="radio"
-                  name="mammal"
-                  value=" penguin "
-                /> Penguin <br />
-                <input
-                  type="radio"
-                  name="mammal"
-                  value=" kangaroo "
-                /> Kangaroo <br />
-                <input
-                  type="radio"
-                  name="mammal"
-                  value="elephant "
-                /> Elephant <br />
-                <br />
+                <input type="radio" name="mountain" /> {sixthqf.answerf} <br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfa} <br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfb} <br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfc} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizSeven}
@@ -306,17 +367,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 7</h3>
                 <p>
-                  <b>What is the largest ocean on Earth?</b>
+                  <b>
+                    {seventhqg.qg}
+                  </b>
                 </p>
-                <input type="radio" name="ocean" value="atlantic ocean " />{" "}
-                Atlantic Ocean <br />
-                <input type="radio" name="ocean" value="indian ocean " /> Indian
-                Ocean <br />
-                <input type="radio" name="ocean" value="arctic ocean " /> Arctic
-                Ocean <br />
-                <input type="radio" name="ocean" value="pacific ocean " />{" "}
-                Pacific Ocean <br />
-                <br />
+                <input type="radio" name="play" /> {seventhqg.answerg} <br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectga} <br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectgb} <br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectgc} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizEight}
@@ -342,25 +400,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 8</h3>
                 <p>
-                  <b>Who painted the Mona Lisa?</b>
+                  <b>
+                    {eightqh.qh}
+                  </b>
                 </p>
-                <input type="radio" name="artist" value="pablo picasso  " />{" "}
-                Pablo Picasso <br />
-                <input
-                  type="radio"
-                  name="artist"
-                  value="leonardo da vinci   "
-                />{" "}
-                Leonardo da Vinci <br />
-                <input
-                  type="radio"
-                  name="artist"
-                  value="vincent van gogh   "
-                />{" "}
-                Vincent van Gogh <br />
-                <input type="radio" name="artist" value="michelangelo  " />{" "}
-                Michelangelo <br />
-                <br />
+                <input type="radio" name="planet" /> {eightqh.answerh} <br />
+                <input type="radio" name="planet" /> {eightqh.notcorrectha} <br />
+                <input type="radio" name="planet" /> {eightqh.notcorrecthb} <br />
+                <input type="radio" name="planet" /> {eightqh.notcorrecthc} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizNine}
@@ -385,23 +432,16 @@ function App() {
               <div className="col-md-6 mt-5">
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 9</h3>
+               
                 <p>
-                  <b>Which country is known as the "Land of the Rising Sun"?</b>
+                  <b>
+                    {ninthqi.qi}
+                  </b>
                 </p>
-                <input type="radio" name="country" value="china   " /> China{" "}
-                <br />
-                <input
-                  type="radio"
-                  name="country"
-                  value=" japan  "
-                /> Japan <br />
-                <input type="radio" name="country" value=" south korea" /> South
-                Korea <br />
-                <input
-                  type="radio"
-                  name="country"
-                  value="thailand"
-                /> Thailand <br />
+                <input type="radio" name="inventor" /> {ninthqi.answeri} <br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectia} <br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectib} <br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectic} <br /><br />
                 <br />
                 <button
                   className="btn btn-success mx-4"
@@ -428,13 +468,14 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 10</h3>
                 <p>
-                  <b>What is the chemical symbol for gold?</b>
+                  <b>
+                    {tenthtqj.qj}
+                  </b>
                 </p>
-                <input type="radio" name="symbol" value="au " /> Au <br />
-                <input type="radio" name="symbol" value="ag " /> Ag <br />
-                <input type="radio" name="symbol" value="fe " /> Fe <br />
-                <input type="radio" name="symbol" value="cu " /> Cu <br />
-                <br />
+                <input type="radio" name="symbol" /> {tenthtqj.answerj} <br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectja} <br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjb} <br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjc} <br /><br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizEleven}
