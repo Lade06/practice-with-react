@@ -61,13 +61,6 @@ function App() {
     setQuizEleven(true);
   };
 
-  const person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue",
-  };
-
   // ARRAY OF QUESTIONS
   const Faq = [
     {
@@ -83,7 +76,6 @@ function App() {
       notcorrectba: "Shark",
       notcorrectbc: "Bat",
       notcorrectbd: "Kangaroo",
-
     },
     {
       qc: "Who painted the Mona Lisa?",
@@ -91,7 +83,6 @@ function App() {
       notcorrectca: "Vincent van Gogh",
       notcorrectcb: "Micheangelo",
       notcorrectcd: "Pablo Picasso",
-
     },
     {
       qd: "What is the chemical symbol for gold?",
@@ -166,16 +157,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 1</h3>
                 <p>
-                  <b>
-                    {firstqa.qa}
-                  </b>
+                  <b>{firstqa.qa}</b>
                 </p>
                 <input type="radio" name="country" /> {firstqa.answera} <br />
-                <input type="radio" name="country" /> {firstqa.notcorrecta} <br />
-                <input type="radio" name="country" /> {firstqa.notcorrectb} <br />
-                <input type="radio" name="country" /> {firstqa.notcorrectc} <br /><br />
-
-
+                <input type="radio" name="country" /> {firstqa.notcorrecta}{" "}
+                <br />
+                <input type="radio" name="country" /> {firstqa.notcorrectb}{" "}
+                <br />
+                <input type="radio" name="country" /> {firstqa.notcorrectc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizTwo}
@@ -201,15 +192,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 2</h3>
                 <p>
-                  <b>
-                    {secondqb.qb}
-                  </b>
+                  <b>{secondqb.qb}</b>
                 </p>
                 <input type="radio" name="mammals" /> {secondqb.answerb} <br />
-                <input type="radio" name="mammals" /> {secondqb.notcorrectba} <br />
-                <input type="radio" name="mammals"/> {secondqb.notcorrectbc} <br />
-                <input type="radio" name="mammals"/> {secondqb.notcorrectbd} <br /><br />
-                
+                <input type="radio" name="mammals" /> {secondqb.notcorrectba}{" "}
+                <br />
+                <input type="radio" name="mammals" /> {secondqb.notcorrectbc}{" "}
+                <br />
+                <input type="radio" name="mammals" /> {secondqb.notcorrectbd}{" "}
+                <br />
+                <br />
                 <br />
                 <br />
                 <button
@@ -237,14 +229,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 3</h3>
                 <p>
-                  <b>
-                    {thirdqc.qc}
-                  </b>
+                  <b>{thirdqc.qc}</b>
                 </p>
                 <input type="radio" name="artist" /> {thirdqc.answerc} <br />
-                <input type="radio" name="artist" /> {thirdqc.notcorrectca} <br />
-                <input type="radio" name="artist" /> {thirdqc.notcorrectcb} <br />
-                <input type="radio" name="artist" /> {thirdqc.notcorrectcd} <br /><br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectca}{" "}
+                <br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectcb}{" "}
+                <br />
+                <input type="radio" name="artist" /> {thirdqc.notcorrectcd}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizFour}
@@ -267,14 +261,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 4</h3>
                 <p>
-                  <b>
-                    {fourthqd.qd}
-                  </b>
+                  <b>{fourthqd.qd}</b>
                 </p>
                 <input type="radio" name="element" /> {fourthqd.answerd} <br />
-                <input type="radio" name="element" /> {fourthqd.notcorrectda} <br />
-                <input type="radio" name="element" /> {fourthqd.notcorrectdb} <br />
-                <input type="radio" name="element" /> {fourthqd.notcorrectdc} <br /><br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectda}{" "}
+                <br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectdb}{" "}
+                <br />
+                <input type="radio" name="element" /> {fourthqd.notcorrectdc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizFive}
@@ -298,16 +294,17 @@ function App() {
               <div className="col-md-6 mt-5">
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 5</h3>
-                
                 <p>
-                  <b>
-                    {fifthqe.qe}
-                  </b>
+                  <b>{fifthqe.qe}</b>
                 </p>
                 <input type="radio" name="continent" /> {fifthqe.answere} <br />
-                <input type="radio" name="continent" /> {fifthqe.notcorrectea} <br />
-                <input type="radio" name="continent" /> {fifthqe.notcorrecteb} <br />
-                <input type="radio" name="continent" /> {fifthqe.notcorrectec} <br /><br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrectea}{" "}
+                <br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrecteb}{" "}
+                <br />
+                <input type="radio" name="continent" /> {fifthqe.notcorrectec}{" "}
+                <br />
+                <br />
                 <br />
                 <button
                   className="btn btn-success mx-4"
@@ -334,14 +331,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 6</h3>
                 <p>
-                  <b>
-                    {sixthqf.qf}
-                  </b>
+                  <b>{sixthqf.qf}</b>
                 </p>
                 <input type="radio" name="mountain" /> {sixthqf.answerf} <br />
-                <input type="radio" name="mountain" /> {sixthqf.notcorrectfa} <br />
-                <input type="radio" name="mountain" /> {sixthqf.notcorrectfb} <br />
-                <input type="radio" name="mountain" /> {sixthqf.notcorrectfc} <br /><br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfa}{" "}
+                <br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfb}{" "}
+                <br />
+                <input type="radio" name="mountain" /> {sixthqf.notcorrectfc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizSeven}
@@ -367,14 +366,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 7</h3>
                 <p>
-                  <b>
-                    {seventhqg.qg}
-                  </b>
+                  <b>{seventhqg.qg}</b>
                 </p>
                 <input type="radio" name="play" /> {seventhqg.answerg} <br />
-                <input type="radio" name="play" /> {seventhqg.notcorrectga} <br />
-                <input type="radio" name="play" /> {seventhqg.notcorrectgb} <br />
-                <input type="radio" name="play" /> {seventhqg.notcorrectgc} <br /><br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectga}{" "}
+                <br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectgb}{" "}
+                <br />
+                <input type="radio" name="play" /> {seventhqg.notcorrectgc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizEight}
@@ -400,14 +401,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 8</h3>
                 <p>
-                  <b>
-                    {eightqh.qh}
-                  </b>
+                  <b>{eightqh.qh}</b>
                 </p>
                 <input type="radio" name="planet" /> {eightqh.answerh} <br />
-                <input type="radio" name="planet" /> {eightqh.notcorrectha} <br />
-                <input type="radio" name="planet" /> {eightqh.notcorrecthb} <br />
-                <input type="radio" name="planet" /> {eightqh.notcorrecthc} <br /><br />
+                <input type="radio" name="planet" /> {eightqh.notcorrectha}{" "}
+                <br />
+                <input type="radio" name="planet" /> {eightqh.notcorrecthb}{" "}
+                <br />
+                <input type="radio" name="planet" /> {eightqh.notcorrecthc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizNine}
@@ -432,16 +435,17 @@ function App() {
               <div className="col-md-6 mt-5">
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 9</h3>
-               
                 <p>
-                  <b>
-                    {ninthqi.qi}
-                  </b>
+                  <b>{ninthqi.qi}</b>
                 </p>
                 <input type="radio" name="inventor" /> {ninthqi.answeri} <br />
-                <input type="radio" name="inventor" /> {ninthqi.notcorrectia} <br />
-                <input type="radio" name="inventor" /> {ninthqi.notcorrectib} <br />
-                <input type="radio" name="inventor" /> {ninthqi.notcorrectic} <br /><br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectia}{" "}
+                <br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectib}{" "}
+                <br />
+                <input type="radio" name="inventor" /> {ninthqi.notcorrectic}{" "}
+                <br />
+                <br />
                 <br />
                 <button
                   className="btn btn-success mx-4"
@@ -468,14 +472,16 @@ function App() {
                 <h1 className="text-center">Quiz Time!</h1>
                 <h3>Question 10</h3>
                 <p>
-                  <b>
-                    {tenthtqj.qj}
-                  </b>
+                  <b>{tenthtqj.qj}</b>
                 </p>
                 <input type="radio" name="symbol" /> {tenthtqj.answerj} <br />
-                <input type="radio" name="symbol" /> {tenthtqj.notcorrectja} <br />
-                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjb} <br />
-                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjc} <br /><br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectja}{" "}
+                <br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjb}{" "}
+                <br />
+                <input type="radio" name="symbol" /> {tenthtqj.notcorrectjc}{" "}
+                <br />
+                <br />
                 <button
                   className="btn btn-success mx-4"
                   onClick={handleShowQuizEleven}
